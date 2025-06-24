@@ -2,23 +2,5 @@ spring:
   application:
     name: order-service
 
-
-
-
-receivers:
-  otlp:
-    protocols:
-      http:
-        endpoint: "0.0.0.0:4318"
-
-exporters:
-  logging:
-    loglevel: debug
-
-service:
-  pipelines:
-    metrics:
-      receivers: [otlp]
-      exporters: [logging]
 server:
-  port: 8090
+  port: 8099
